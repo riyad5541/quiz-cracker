@@ -6,24 +6,15 @@ const OnlyQuiz = ({ quiz }) => {
     const handleAddToCart = () => {
         alert(correctAnswer);
     };
-    const showCurrectQuiz = () =>{
-        if(options[0] === correctAnswer){
-            alert("correct answer");
-        }
-        else if(options[1] === correctAnswer){
-            alert("correct answer");
-        }
-        else if(options[2] === correctAnswer){
-            alert("correct answer");
-        }
-        else if(options[3] === correctAnswer){
+    const showCurrectQuiz = (event) =>{
+        const value = event.target.value;
+        if(value === correctAnswer){
             alert("correct answer");
         }
         else{
             alert("Wrong answer!");
         }
-
-
+        
     }
     return (
         <div className='grid grid-cols-1 gap-5 border border-indigo-600 m-3'>
@@ -35,12 +26,12 @@ const OnlyQuiz = ({ quiz }) => {
                 </svg></button>
 
             </div>
-            
+
             <div className='inline-block'>
-                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" />{options[0]} <br />
-                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /><span>{options[1]}</span><br />
-                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /><span>{options[2]}</span><br />
-                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /> <span>{options[3]}</span>
+                <input onChange={showCurrectQuiz} type="radio" name="radio-1" className="radio" value={options[0]}/>{options[0]} <br />
+                <input onChange={showCurrectQuiz} type="radio" name="radio-1" className="radio" value={options[1]}/><span>{options[1]}</span><br />
+                <input onChange={showCurrectQuiz} type="radio" name="radio-1" className="radio" value={options[2]}/><span>{options[2]}</span><br />
+                <input onChange={showCurrectQuiz} type="radio" name="radio-1" className="radio" value={options[3]}/> <span>{options[3]}</span>
             </div>
 
         </div>
