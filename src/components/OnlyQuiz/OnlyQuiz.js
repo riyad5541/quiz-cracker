@@ -17,10 +17,10 @@ const OnlyQuiz = ({quiz}) => {
 
             </div>
             <div className='inline-block'>
-            <input type="radio" name="radio-1" className="radio"  />{options[0]} <br />
-            <input type="radio" name="radio-1" className="radio"  /><span>{options[1]}</span> <br />
-            <input type="radio" name="radio-1" className="radio"  /><span>{options[2]}</span> <br />
-            <input type="radio" name="radio-1" className="radio"  /> <span>{options[3]}</span>
+            <input type="radio" name="radio-1" className="radio"/>{options[0]} <br />
+            <input type="radio" name="radio-1" className="radio"/><span>{options[1]}</span> <br />
+            <input type="radio" name="radio-1" className="radio"/><span>{options[2]}</span> <br />
+            <input type="radio" name="radio-1" className="radio"/> <span>{options[3]}</span>
             </div>
             
         </div>
