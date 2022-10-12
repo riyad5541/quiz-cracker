@@ -23,6 +23,7 @@ const OnlyQuiz = ({ quiz }) => {
             alert("Wrong answer!");
         }
 
+
     }
     return (
         <div className='grid grid-cols-1 gap-5 border border-indigo-600 m-3'>
@@ -34,6 +35,7 @@ const OnlyQuiz = ({ quiz }) => {
                 </svg></button>
 
             </div>
+            
             <div className='inline-block'>
                 <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" />{options[0]} <br />
                 <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /><span>{options[1]}</span><br />
