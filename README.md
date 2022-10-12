@@ -1,5 +1,15 @@
 # Getting Started with Create React App
 
+# Project name is webdeveloper-quiz
+
+Here is the live site link [https://willowy-genie-0116cd.netlify.app/cart/2]
+
+### We use tailwind css react for style this site.
+
+### This site is a quiz related site.
+
+### We use API for the quiz.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
