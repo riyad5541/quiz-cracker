@@ -13,45 +13,46 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 function App() {
   const router = createBrowserRouter([
     {
-      path:'/',
-      element:<Main></Main>,
-      children:[
+      path: '/',
+      element: <Main></Main>,
+      children: [
         {
-          path:'/',
-          loader:async () => {
+          path: '/',
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
-          element:<Home></Home>,
+          element: <Home></Home>,
         },
         {
-          path:'/home',
-          element:<Home></Home>,
+          path: '/home',
+          element: <Home></Home>,
         },
         {
-          path:'/statistics',
-          loader:async () => {
+          path: '/statistics',
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
-          element:<Statistics></Statistics>,
+          element: <Statistics></Statistics>,
         },
         {
-          path:'/blog',
-          element:<Blog></Blog>,
+          path: '/blog',
+          element: <Blog></Blog>,
         },
         {
-          path:'/cart/:id',
-          element:<AllQuiz></AllQuiz>,
-          loader:({ params }) => {
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)},
+          path: '/cart/:id',
+          element: <AllQuiz></AllQuiz>,
+          loader: ({ params }) => {
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          },
         },
-        
+
       ],
-      errorElement:<ErrorPage></ErrorPage>,
+      errorElement: <ErrorPage></ErrorPage>,
     },
   ])
   return (
     <div className="App">
-    <RouterProvider router={router}></RouterProvider>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
