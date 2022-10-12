@@ -1,11 +1,29 @@
 import React from 'react';
 
 const OnlyQuiz = ({ quiz }) => {
-    // console.log(quiz)
+    console.log(quiz)
     const { question, options, correctAnswer } = quiz
     const handleAddToCart = () => {
         alert(correctAnswer);
     };
+    const showCurrectQuiz = () =>{
+        if(options[0] === correctAnswer){
+            alert("correct answer");
+        }
+        else if(options[1] === correctAnswer){
+            alert("correct answer");
+        }
+        else if(options[2] === correctAnswer){
+            alert("correct answer");
+        }
+        else if(options[3] === correctAnswer){
+            alert("correct answer");
+        }
+        else{
+            alert("Wrong answer!");
+        }
+
+    }
     return (
         <div className='grid grid-cols-1 gap-5 border border-indigo-600 m-3'>
             <div className='flex justify-center'>
@@ -17,10 +35,10 @@ const OnlyQuiz = ({ quiz }) => {
 
             </div>
             <div className='inline-block'>
-                <input type="radio" name="radio-1" className="radio" />{options[0]} <br />
-                <input type="radio" name="radio-1" className="radio" /><span>{options[1]}</span> <br />
-                <input type="radio" name="radio-1" className="radio" /><span>{options[2]}</span> <br />
-                <input type="radio" name="radio-1" className="radio" /> <span>{options[3]}</span>
+                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" />{options[0]} <br />
+                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /><span>{options[1]}</span><br />
+                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /><span>{options[2]}</span><br />
+                <input onClick={showCurrectQuiz} type="radio" name="radio-1" className="radio" /> <span>{options[3]}</span>
             </div>
 
         </div>
