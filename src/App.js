@@ -15,7 +15,6 @@ function App() {
     {
       path:'/',
       element:<Main></Main>,
-      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
           path:'/',
@@ -44,8 +43,10 @@ function App() {
           element:<AllQuiz></AllQuiz>,
           loader:({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)},
-        }
-      ]
+        },
+        
+      ],
+      errorElement:<ErrorPage></ErrorPage>,
     },
   ])
   return (
